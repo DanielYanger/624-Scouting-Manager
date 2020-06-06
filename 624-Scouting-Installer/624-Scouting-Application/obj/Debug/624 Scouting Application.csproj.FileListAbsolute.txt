@@ -1,0 +1,10 @@
+D:\Documents\GitHub\VS-Stuff\624 Scouting\624 Scouting Installer\624 Scouting Application\bin\Debug\624 Scouting Application.exe.config
+D:\Documents\GitHub\VS-Stuff\624 Scouting\624 Scouting Installer\624 Scouting Application\bin\Debug\624 Scouting Application.exe
+D:\Documents\GitHub\VS-Stuff\624 Scouting\624 Scouting Installer\624 Scouting Application\bin\Debug\624 Scouting Application.pdb
+D:\Documents\GitHub\VS-Stuff\624 Scouting\624 Scouting Installer\624 Scouting Application\obj\Debug\624 Scouting Application.csprojAssemblyReference.cache
+D:\Documents\GitHub\VS-Stuff\624 Scouting\624 Scouting Installer\624 Scouting Application\obj\Debug\_624_Scouting_Application.Form1.resources
+D:\Documents\GitHub\VS-Stuff\624 Scouting\624 Scouting Installer\624 Scouting Application\obj\Debug\_624_Scouting_Application.Properties.Resources.resources
+D:\Documents\GitHub\VS-Stuff\624 Scouting\624 Scouting Installer\624 Scouting Application\obj\Debug\624 Scouting Application.csproj.GenerateResource.cache
+D:\Documents\GitHub\VS-Stuff\624 Scouting\624 Scouting Installer\624 Scouting Application\obj\Debug\624 Scouting Application.csproj.CoreCompileInputs.cache
+D:\Documents\GitHub\VS-Stuff\624 Scouting\624 Scouting Installer\624 Scouting Application\obj\Debug\624 Scouting Application.exe
+D:\Documents\GitHub\VS-Stuff\624 Scouting\624 Scouting Installer\624 Scouting Application\obj\Debug\624 Scouting Application.pdb

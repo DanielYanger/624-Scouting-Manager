@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "624ScoutingApplication", "624-Scouting-Application\624ScoutingApplication.csproj", "{9624BD65-93DB-4A9F-BB9A-3E3A8C14BDE3}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "624 Scouting Manager", "624 Scouting Manager\624 Scouting Manager.vdproj", "{23B350A0-F5F8-4B4E-A8B2-369541487CB2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9624BD65-93DB-4A9F-BB9A-3E3A8C14BDE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9624BD65-93DB-4A9F-BB9A-3E3A8C14BDE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9624BD65-93DB-4A9F-BB9A-3E3A8C14BDE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9624BD65-93DB-4A9F-BB9A-3E3A8C14BDE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23B350A0-F5F8-4B4E-A8B2-369541487CB2}.Debug|Any CPU.ActiveCfg = Debug
+		{23B350A0-F5F8-4B4E-A8B2-369541487CB2}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5BB77F93-D239-46E5-A32B-8EE79036A5B2}
+	EndGlobalSection
+EndGlobal
