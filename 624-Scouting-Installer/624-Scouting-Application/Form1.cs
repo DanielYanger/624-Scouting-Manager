@@ -61,7 +61,8 @@ namespace _624_Scouting_Application
             {
                 psi.FileName = PythonExeText.Text;
                 var folder_path = devicePath.Text;
-                string arg = string.Format(@"D:\Documents\GitHub\VS-Stuff\624-Scouting\624-Scouting-Installer\624-Scouting-Application\merging.py {0}", folder_path);
+                String path = @Application.StartupPath + @"\merging.py";
+                string arg = string.Format(" \"{0}\" {1}", path, folder_path);
                 psi.Arguments = arg;
                 psi.UseShellExecute = false;
                 psi.CreateNoWindow = true;
@@ -81,12 +82,12 @@ namespace _624_Scouting_Application
                 }
                 else
                 {
-                    MessageBox.Show("The program did not execute successfully. Please ensure the proper folder is selected.");
+                    MessageBox.Show("The program did not execute successfully. Please ensure the proper folder is selected. \n"+errors);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: Something went wrong. Please ensure everything is correct and try again.");
+                MessageBox.Show("Error: Something went wrong. Please ensure everything is correct and try again. \n"+ex.ToString());
             }
         }
 
@@ -97,7 +98,8 @@ namespace _624_Scouting_Application
                 psi.FileName = PythonExeText.Text;
                 var api_key = apiKeyText.Text;
                 var event_key = eventCodeText.Text;
-                string arg = string.Format(@"D:\Documents\GitHub\VS-Stuff\624-Scouting\624-Scouting-Installer\624-Scouting-Application\Scouting.py {0} {1}", event_key, api_key);
+                String path = @Application.StartupPath+@"\Scouting.py";
+                string arg = string.Format(" \"{0}\" {1} {2}", @path, event_key, api_key);
                 psi.Arguments = arg;
                 psi.UseShellExecute = false;
                 psi.CreateNoWindow = true;
@@ -112,17 +114,17 @@ namespace _624_Scouting_Application
                 }
                 if (errors=="")
                 {
-                    MessageBox.Show("The program successfully executed. The schedule can be found on your desktop.");
+                    MessageBox.Show("The program successfully executed. The schedule can be found on your desktop. \n"+results);
                 }
                 else
                 {
-                    MessageBox.Show("The program did not execute successfully. Double check your API key and event code.");
+                    MessageBox.Show("The program did not execute successfully. Double check your API key and event code. \n"+errors);
                 }
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: Something went wrong. Please ensure everything is correct and try again.");
+                MessageBox.Show("Error: Something went wrong. Please ensure everything is correct and try again. \n"+ex.ToString());
             }
         }
 

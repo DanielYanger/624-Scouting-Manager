@@ -88,8 +88,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CR_thicker.ico" />
-    <Content Include="merging.py" />
-    <Content Include="Scouting.py" />
+    <AdditionalFiles Include="merging.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AdditionalFiles>
+    <AdditionalFiles Include="Scouting.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AdditionalFiles>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
