@@ -76,7 +76,7 @@ namespace _624_Scouting_Application
                     results = process.StandardOutput.ReadToEnd();
                 }
                 Console.WriteLine(errors);
-                if (errors == "")
+                if (results.Contains("yeet"))
                 {
                     MessageBox.Show("The program successfully executed. The CSV should be on your desktop.");
                 }
@@ -112,7 +112,7 @@ namespace _624_Scouting_Application
                     errors = process.StandardError.ReadToEnd();
                     results = process.StandardOutput.ReadToEnd();
                 }
-                if (errors=="")
+                if (results.Contains("200"))
                 {
                     MessageBox.Show("The program successfully executed. The schedule can be found on your desktop. \n"+results);
                 }

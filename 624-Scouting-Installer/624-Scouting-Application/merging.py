@@ -3,7 +3,7 @@ import shutil
 
 try:
   import pandas as pd
-except ImportError:
+except:
   print ("Trying to Install required modules: pandas")
   os.system('python -m pip install pandas')
 
@@ -48,9 +48,10 @@ except FileNotFoundError:
       try:
         full_data = full_data.append(data,ignore_index=True)
       except:
-        full_data = pd.DataFrame(data,index=[0])
+        full_data = pd.DataFrame(data, index = [0])
     shutil.move(join(folder, i),join(dir,i))
 
 full_data.to_csv(f'C:\\Users\\{username}\\Desktop\\MatchData.csv', index=False)
 
 
+print("yeet")
