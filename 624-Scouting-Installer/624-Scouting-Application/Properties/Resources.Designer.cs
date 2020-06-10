@@ -63,6 +63,16 @@ namespace _624_Scouting_Application.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _30x30_Loading {
+            get {
+                object obj = ResourceManager.GetObject("30x30 Loading", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _624HD_Transparent {
             get {
                 object obj = ResourceManager.GetObject("624HD_Transparent", resourceCulture);

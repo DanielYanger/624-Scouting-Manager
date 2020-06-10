@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Threading.Tasks;
 using System.Diagnostics;
 using System.Windows.Forms;
 
@@ -55,7 +55,8 @@ namespace _624_Scouting_Application
            
         }
 
-        private void importButton_Click(object sender, EventArgs e)
+
+        private void btnImport_Click()
         {
             try
             {
@@ -82,23 +83,52 @@ namespace _624_Scouting_Application
                 }
                 else
                 {
-                    MessageBox.Show("The program did not execute successfully. Please ensure the proper folder is selected. \n"+errors);
+                    MessageBox.Show("The program did not execute successfully. Please ensure the proper folder is selected. \n" + errors);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: Something went wrong. Please ensure everything is correct and try again. \n"+ex.ToString());
+                MessageBox.Show("Error: Something went wrong. Please ensure everything is correct and try again. \n" + ex.ToString());
             }
         }
 
-        private void scheduleGeneratorButton_Click(object sender, EventArgs e)
+        private async void importButton_Click(object sender, EventArgs e)
+        {
+
+            // start the waiting animation
+            Hiding.Visible = false;
+
+            // simply start and await the loading task
+            importButton.Enabled = false;
+            await Task.Run(() => btnImport_Click());
+
+            // re-enable things
+            importButton.Enabled = true;
+            Hiding.Visible = true;
+        }
+
+        private async void scheduleGeneratorButton_Click(object sender, EventArgs e)
+        {
+            // start the waiting animation
+            pictureBox3.Visible = false;
+
+            // simply start and await the loading task
+            importButton.Enabled = false;
+            await Task.Run(() => Schedule());
+
+            // re-enable things
+            importButton.Enabled = true;
+            pictureBox3.Visible = true;
+        }
+
+        private void Schedule()
         {
             try
             {
                 psi.FileName = PythonExeText.Text;
                 var api_key = apiKeyText.Text;
                 var event_key = eventCodeText.Text;
-                String path = @Application.StartupPath+@"\Scouting.py";
+                String path = @Application.StartupPath + @"\Scouting.py";
                 string arg = string.Format(" \"{0}\" {1} {2}", @path, event_key, api_key);
                 psi.Arguments = arg;
                 psi.UseShellExecute = false;
@@ -114,21 +144,26 @@ namespace _624_Scouting_Application
                 }
                 if (results.Contains("200"))
                 {
-                    MessageBox.Show("The program successfully executed. The schedule can be found on your desktop. \n"+results);
+                    MessageBox.Show("The program successfully executed. The schedule can be found on your desktop. \n" + results);
                 }
                 else
                 {
-                    MessageBox.Show("The program did not execute successfully. Double check your API key and event code. \n"+errors);
+                    MessageBox.Show("The program did not execute successfully. Double check your API key and event code. \n" + errors);
                 }
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: Something went wrong. Please ensure everything is correct and try again. \n"+ex.ToString());
+                MessageBox.Show("Error: Something went wrong. Please ensure everything is correct and try again. \n" + ex.ToString());
             }
         }
 
         private void PythonEngineLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
 
         }

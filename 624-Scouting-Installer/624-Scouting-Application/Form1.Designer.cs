@@ -42,7 +42,15 @@
             this.importButton = new System.Windows.Forms.Button();
             this.devicePath = new System.Windows.Forms.TextBox();
             this.ChooseDeviceButton = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.Hiding = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Hiding)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,7 +90,7 @@
             // scheduleGeneratorButton
             // 
             this.scheduleGeneratorButton.ForeColor = System.Drawing.Color.Black;
-            this.scheduleGeneratorButton.Location = new System.Drawing.Point(200, 417);
+            this.scheduleGeneratorButton.Location = new System.Drawing.Point(200, 438);
             this.scheduleGeneratorButton.Name = "scheduleGeneratorButton";
             this.scheduleGeneratorButton.Size = new System.Drawing.Size(100, 23);
             this.scheduleGeneratorButton.TabIndex = 28;
@@ -95,7 +103,7 @@
             this.apiKeyLabel.AutoSize = true;
             this.apiKeyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.apiKeyLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(240)))), ((int)(((byte)(0)))));
-            this.apiKeyLabel.Location = new System.Drawing.Point(94, 382);
+            this.apiKeyLabel.Location = new System.Drawing.Point(94, 404);
             this.apiKeyLabel.Name = "apiKeyLabel";
             this.apiKeyLabel.Size = new System.Drawing.Size(63, 18);
             this.apiKeyLabel.TabIndex = 27;
@@ -104,7 +112,7 @@
             // 
             // apiKeyText
             // 
-            this.apiKeyText.Location = new System.Drawing.Point(177, 382);
+            this.apiKeyText.Location = new System.Drawing.Point(177, 404);
             this.apiKeyText.Name = "apiKeyText";
             this.apiKeyText.Size = new System.Drawing.Size(268, 20);
             this.apiKeyText.TabIndex = 26;
@@ -114,7 +122,7 @@
             this.eventCodeLabel.AutoSize = true;
             this.eventCodeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.eventCodeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(240)))), ((int)(((byte)(0)))));
-            this.eventCodeLabel.Location = new System.Drawing.Point(68, 348);
+            this.eventCodeLabel.Location = new System.Drawing.Point(68, 370);
             this.eventCodeLabel.Name = "eventCodeLabel";
             this.eventCodeLabel.Size = new System.Drawing.Size(89, 18);
             this.eventCodeLabel.TabIndex = 25;
@@ -123,7 +131,7 @@
             // 
             // eventCodeText
             // 
-            this.eventCodeText.Location = new System.Drawing.Point(177, 348);
+            this.eventCodeText.Location = new System.Drawing.Point(177, 370);
             this.eventCodeText.Name = "eventCodeText";
             this.eventCodeText.Size = new System.Drawing.Size(268, 20);
             this.eventCodeText.TabIndex = 24;
@@ -133,7 +141,7 @@
             this.sechduleLabel.AutoSize = true;
             this.sechduleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sechduleLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(240)))), ((int)(((byte)(0)))));
-            this.sechduleLabel.Location = new System.Drawing.Point(17, 315);
+            this.sechduleLabel.Location = new System.Drawing.Point(17, 337);
             this.sechduleLabel.Name = "sechduleLabel";
             this.sechduleLabel.Size = new System.Drawing.Size(153, 20);
             this.sechduleLabel.TabIndex = 23;
@@ -144,7 +152,7 @@
             this.ImportMatchDataLabel.AutoSize = true;
             this.ImportMatchDataLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ImportMatchDataLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(240)))), ((int)(((byte)(0)))));
-            this.ImportMatchDataLabel.Location = new System.Drawing.Point(17, 223);
+            this.ImportMatchDataLabel.Location = new System.Drawing.Point(17, 235);
             this.ImportMatchDataLabel.Name = "ImportMatchDataLabel";
             this.ImportMatchDataLabel.Size = new System.Drawing.Size(142, 20);
             this.ImportMatchDataLabel.TabIndex = 22;
@@ -153,7 +161,7 @@
             // importButton
             // 
             this.importButton.ForeColor = System.Drawing.Color.Black;
-            this.importButton.Location = new System.Drawing.Point(200, 289);
+            this.importButton.Location = new System.Drawing.Point(200, 302);
             this.importButton.Name = "importButton";
             this.importButton.Size = new System.Drawing.Size(100, 23);
             this.importButton.TabIndex = 20;
@@ -163,7 +171,7 @@
             // 
             // devicePath
             // 
-            this.devicePath.Location = new System.Drawing.Point(177, 258);
+            this.devicePath.Location = new System.Drawing.Point(177, 266);
             this.devicePath.Name = "devicePath";
             this.devicePath.Size = new System.Drawing.Size(268, 20);
             this.devicePath.TabIndex = 19;
@@ -171,13 +179,48 @@
             // ChooseDeviceButton
             // 
             this.ChooseDeviceButton.ForeColor = System.Drawing.Color.Black;
-            this.ChooseDeviceButton.Location = new System.Drawing.Point(37, 258);
+            this.ChooseDeviceButton.Location = new System.Drawing.Point(37, 266);
             this.ChooseDeviceButton.Name = "ChooseDeviceButton";
             this.ChooseDeviceButton.Size = new System.Drawing.Size(120, 20);
             this.ChooseDeviceButton.TabIndex = 18;
             this.ChooseDeviceButton.Text = "Choose Device";
             this.ChooseDeviceButton.UseVisualStyleBackColor = true;
             this.ChooseDeviceButton.Click += new System.EventHandler(this.ChooseDeviceButton_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Location = new System.Drawing.Point(306, 434);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(39, 36);
+            this.pictureBox3.TabIndex = 37;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::_624_Scouting_Application.Properties.Resources._30x30_Loading;
+            this.pictureBox4.Location = new System.Drawing.Point(306, 434);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox4.TabIndex = 36;
+            this.pictureBox4.TabStop = false;
+            // 
+            // Hiding
+            // 
+            this.Hiding.Location = new System.Drawing.Point(306, 292);
+            this.Hiding.Name = "Hiding";
+            this.Hiding.Size = new System.Drawing.Size(39, 36);
+            this.Hiding.TabIndex = 35;
+            this.Hiding.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::_624_Scouting_Application.Properties.Resources._30x30_Loading;
+            this.pictureBox2.Location = new System.Drawing.Point(306, 298);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox2.TabIndex = 34;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
             // 
@@ -197,6 +240,10 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(484, 480);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.Hiding);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.PythonEngineLabel);
             this.Controls.Add(this.PythonExeText);
@@ -218,6 +265,10 @@
             this.MinimumSize = new System.Drawing.Size(500, 519);
             this.Name = "Form1";
             this.Text = "624 Scouting Manager";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Hiding)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -240,6 +291,10 @@
         private System.Windows.Forms.TextBox devicePath;
         private System.Windows.Forms.Button ChooseDeviceButton;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox Hiding;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }
 
