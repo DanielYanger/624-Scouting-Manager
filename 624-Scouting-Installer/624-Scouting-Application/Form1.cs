@@ -11,6 +11,8 @@ namespace _624_Scouting_Application
         public Form1()
         {
             InitializeComponent();
+            pictureBox2.Visible = false;
+            pictureBox4.Visible = false;
         }
 
         //Python Engine
@@ -96,7 +98,7 @@ namespace _624_Scouting_Application
         {
 
             // start the waiting animation
-            Hiding.Visible = false;
+            pictureBox2.Visible = true;
 
             // simply start and await the loading task
             importButton.Enabled = false;
@@ -104,13 +106,13 @@ namespace _624_Scouting_Application
 
             // re-enable things
             importButton.Enabled = true;
-            Hiding.Visible = true;
+            pictureBox2.Visible = false;
         }
 
         private async void scheduleGeneratorButton_Click(object sender, EventArgs e)
         {
             // start the waiting animation
-            pictureBox3.Visible = false;
+            pictureBox4.Visible = true;
 
             // simply start and await the loading task
             importButton.Enabled = false;
@@ -118,7 +120,7 @@ namespace _624_Scouting_Application
 
             // re-enable things
             importButton.Enabled = true;
-            pictureBox3.Visible = true;
+            pictureBox4.Visible = false;
         }
 
         private void Schedule()

@@ -298,7 +298,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:624 Scouting Manager"
         "ProductCode" = "8:{908EAAB9-1F91-4EF7-8092-2917587D8076}"
-        "PackageCode" = "8:{8CAD203C-2D0B-4A11-8023-D4440DDED802}"
+        "PackageCode" = "8:{18B8EAF0-0CD7-4135-A564-53216B1F0B94}"
         "UpgradeCode" = "8:{6A4680E3-2022-425E-AE6C-A31B9302BA54}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
@@ -320,7 +320,7 @@
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
         "TargetPlatform" = "3:0"
-        "PreBuildEvent" = "8:python -m pip install pandas"
+        "PreBuildEvent" = "8:"
         "PostBuildEvent" = "8:"
         "RunPostBuildEvent" = "3:0"
         }

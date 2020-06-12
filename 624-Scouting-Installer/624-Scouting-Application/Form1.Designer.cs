@@ -42,14 +42,10 @@
             this.importButton = new System.Windows.Forms.Button();
             this.devicePath = new System.Windows.Forms.TextBox();
             this.ChooseDeviceButton = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.Hiding = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Hiding)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -187,14 +183,6 @@
             this.ChooseDeviceButton.UseVisualStyleBackColor = true;
             this.ChooseDeviceButton.Click += new System.EventHandler(this.ChooseDeviceButton_Click);
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Location = new System.Drawing.Point(306, 434);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(39, 36);
-            this.pictureBox3.TabIndex = 37;
-            this.pictureBox3.TabStop = false;
-            // 
             // pictureBox4
             // 
             this.pictureBox4.Image = global::_624_Scouting_Application.Properties.Resources._30x30_Loading;
@@ -203,14 +191,6 @@
             this.pictureBox4.Size = new System.Drawing.Size(30, 30);
             this.pictureBox4.TabIndex = 36;
             this.pictureBox4.TabStop = false;
-            // 
-            // Hiding
-            // 
-            this.Hiding.Location = new System.Drawing.Point(306, 292);
-            this.Hiding.Name = "Hiding";
-            this.Hiding.Size = new System.Drawing.Size(39, 36);
-            this.Hiding.TabIndex = 35;
-            this.Hiding.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -240,9 +220,7 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(484, 480);
-            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.Hiding);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.PythonEngineLabel);
@@ -265,9 +243,7 @@
             this.MinimumSize = new System.Drawing.Size(500, 519);
             this.Name = "Form1";
             this.Text = "624 Scouting Manager";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Hiding)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -291,9 +267,7 @@
         private System.Windows.Forms.TextBox devicePath;
         private System.Windows.Forms.Button ChooseDeviceButton;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox Hiding;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
     }
 }
