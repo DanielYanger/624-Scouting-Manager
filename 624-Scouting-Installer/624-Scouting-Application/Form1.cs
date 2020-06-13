@@ -19,7 +19,7 @@ namespace _624_Scouting_Application
         ProcessStartInfo psi = new ProcessStartInfo();
 
         //Folder Browser
-        FolderBrowserDialog ofd = new FolderBrowserDialog();
+        OpenFileDialog ofd = new OpenFileDialog();
 
         //File Browser
         OpenFileDialog fd = new OpenFileDialog();
@@ -36,9 +36,10 @@ namespace _624_Scouting_Application
         //Choose Device Butoon
         private void ChooseDeviceButton_Click(object sender, EventArgs e)
         {
+          
             if (ofd.ShowDialog() == DialogResult.OK)
             {
-                devicePath.Text = ofd.SelectedPath;
+                devicePath.Text = ofd.FileName;
             }
         }
 
