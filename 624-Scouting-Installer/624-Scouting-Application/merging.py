@@ -3,12 +3,12 @@ import shutil
 
 try:
   import pandas as pd
-except:
+except ImportError:
   print ("Trying to Install required modules: pandas")
   os.system('python -m pip install pandas')
-  import pandas as pd
 
 import csv
+import pandas as pd
 import json 
 import sys
 from os import listdir
@@ -30,8 +30,6 @@ try:
   for i in onlyfiles:
     with open(join(folder, i)) as f:
       data = json.load(f)
-      data['Match Number']=(f.name[f.name.index('Match ')+6])
-      data['Team Number']=(f.name[f.name.index('_ ')+2:f.name.index('.json')])
       full_data = full_data.append(data,ignore_index=True)
     shutil.move(join(folder, i),join(dir,i))
     
@@ -43,15 +41,10 @@ except FileNotFoundError:
   for i in onlyfiles:
     with open(join(folder, i)) as f:
       data = json.load(f)
-      data['Match Number']=(f.name[f.name.index('Match ')+6])
-      data['Team Number']=(f.name[f.name.index('_ ')+2:f.name.index('.json')])
       try:
         full_data = full_data.append(data,ignore_index=True)
       except:
-        full_data = pd.DataFrame(data, index = [0])
+        full_data = pd.DataFrame(data,index=[0])
     shutil.move(join(folder, i),join(dir,i))
 
 full_data.to_csv(f'C:\\Users\\{username}\\Desktop\\MatchData.csv', index=False)
-
-
-print("yeet")
