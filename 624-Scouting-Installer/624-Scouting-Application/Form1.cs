@@ -65,6 +65,7 @@ namespace _624_Scouting_Application
             {
                 psi.FileName = PythonExeText.Text;
                 var folder_path = devicePath.Text;
+                //String path = @"D:\Documents\GitHub\624-Scouting\624-Scouting-Installer\624-Scouting-Application\merging.py";
                 String path = @Application.StartupPath + @"\merging.py";
                 string arg = string.Format(" \"{0}\" {1}", path, folder_path);
                 psi.Arguments = arg;
