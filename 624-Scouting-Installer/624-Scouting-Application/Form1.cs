@@ -63,32 +63,46 @@ namespace _624_Scouting_Application
         {
             try
             {
-                psi.FileName = PythonExeText.Text;
-                var folder_path = devicePath.Text;
-                //String path = @"D:\Documents\GitHub\624-Scouting\624-Scouting-Installer\624-Scouting-Application\merging.py";
-                String path = @Application.StartupPath + @"\merging.py";
-                string arg = string.Format(" \"{0}\" {1}", path, folder_path);
-                psi.Arguments = arg;
-                psi.UseShellExecute = false;
-                psi.CreateNoWindow = true;
-                psi.RedirectStandardOutput = true;
-                psi.RedirectStandardError = true;
-                var errors = "";
-                var results = "";
-                using (var process = Process.Start(psi))
-                {
-                    errors = process.StandardError.ReadToEnd();
-                    results = process.StandardOutput.ReadToEnd();
-                }
-                Console.WriteLine(errors);
-                if (results.Contains("yeet"))
-                {
-                    MessageBox.Show("The program successfully executed. The CSV should be on your desktop.");
-                }
-                else
-                {
-                    MessageBox.Show("The program did not execute successfully. Please ensure the proper folder is selected. \n" + errors);
-                }
+               
+               
+                    psi.FileName = PythonExeText.Text;
+                    var folder_path = devicePath.Text;
+                    //String path = @"D:\Documents\GitHub\624-Scouting\624-Scouting-Installer\624-Scouting-Application\merging.py";
+                    String path = @Application.StartupPath + @"\merging.py";
+                    string arg;
+                    if (radioButton1.Checked)
+                    {
+                         arg = string.Format(" \"{0}\" {1} {2}", path, folder_path, true);
+                    }
+                    
+                    else
+                    {
+                         arg = string.Format(" \"{0}\" {1} {2}", path, folder_path, false);
+                    }
+                Console.WriteLine(arg);
+                    psi.Arguments = arg;
+                    psi.UseShellExecute = false;
+                    psi.CreateNoWindow = true;
+                    psi.RedirectStandardOutput = true;
+                    psi.RedirectStandardError = true;
+                    var errors = "";
+                    var results = "";
+                    using (var process = Process.Start(psi))
+                    {
+                        errors = process.StandardError.ReadToEnd();
+                        results = process.StandardOutput.ReadToEnd();
+                    }
+                    Console.WriteLine(errors);
+                    if (results.Contains("yeet"))
+                    {
+                        MessageBox.Show("The program successfully executed. The CSV should be on your desktop." + results);
+                    }
+                    else
+                    {
+                        MessageBox.Show("The program did not execute successfully. Please ensure the proper folder is selected. \n" + errors);
+                    }
+                
+                
             }
             catch (Exception ex)
             {
@@ -168,6 +182,16 @@ namespace _624_Scouting_Application
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }
