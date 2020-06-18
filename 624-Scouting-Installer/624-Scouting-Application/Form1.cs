@@ -63,12 +63,10 @@ namespace _624_Scouting_Application
         {
             try
             {
-               
-               
                     psi.FileName = PythonExeText.Text;
                     var folder_path = devicePath.Text;
-                    //String path = @"D:\Documents\GitHub\624-Scouting\624-Scouting-Installer\624-Scouting-Application\merging.py";
-                    String path = @Application.StartupPath + @"\merging.py";
+                    String path = @"D:\Documents\GitHub\624-Scouting\624-Scouting-Installer\624-Scouting-Application\merging.py";
+                    //String path = @Application.StartupPath + @"\merging.py";
                     string arg;
                     if (radioButton1.Checked)
                     {
@@ -79,7 +77,6 @@ namespace _624_Scouting_Application
                     {
                          arg = string.Format(" \"{0}\" {1} {2}", path, folder_path, false);
                     }
-                Console.WriteLine(arg);
                     psi.Arguments = arg;
                     psi.UseShellExecute = false;
                     psi.CreateNoWindow = true;
@@ -92,10 +89,9 @@ namespace _624_Scouting_Application
                         errors = process.StandardError.ReadToEnd();
                         results = process.StandardOutput.ReadToEnd();
                     }
-                    Console.WriteLine(errors);
                     if (results.Contains("yeet"))
                     {
-                        MessageBox.Show("The program successfully executed. The CSV should be on your desktop." + results);
+                        MessageBox.Show("The program successfully executed. The CSV should be on your desktop.");
                     }
                     else
                     {
@@ -162,7 +158,7 @@ namespace _624_Scouting_Application
                 }
                 if (results.Contains("200"))
                 {
-                    MessageBox.Show("The program successfully executed. The schedule can be found on your desktop. \n" + results);
+                    MessageBox.Show("The program successfully executed. The schedule can be found on your desktop." );
                 }
                 else
                 {

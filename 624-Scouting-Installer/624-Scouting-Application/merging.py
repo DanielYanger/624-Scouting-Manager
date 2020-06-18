@@ -36,7 +36,6 @@ if sys.argv[2]=='True':
             full_data = pd.DataFrame()
             full_data = full_data.append(i,ignore_index=True)
 
-    print(full_data)
     duplicated = full_data.duplicated(keep='last', subset=["Team Number","Match Number"])
     index=0
     for i in duplicated:
@@ -44,7 +43,6 @@ if sys.argv[2]=='True':
         full_data=full_data.drop(full_data.index[index])
         index-=1
       index+=1
-    print(full_data)
 
     full_data.to_csv(f'C:\\Users\\{username}\\Desktop\\MatchData.csv', index=False)
 
@@ -64,7 +62,6 @@ else:
             full_data = pd.DataFrame()
             full_data = full_data.append(i,ignore_index=True)
 
-    print(full_data)
     duplicated = full_data.duplicated(keep='last', subset=["Team Number"])
     index=0
     for i in duplicated:
@@ -72,7 +69,6 @@ else:
         full_data=full_data.drop(full_data.index[index])
         index-=1
       index+=1
-    print(full_data)
 
     full_data.to_csv(f'C:\\Users\\{username}\\Desktop\\PitData.csv', index=False)
 
