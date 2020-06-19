@@ -47,6 +47,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -175,10 +176,11 @@
             this.ImportMatchDataLabel.Size = new System.Drawing.Size(142, 20);
             this.ImportMatchDataLabel.TabIndex = 22;
             this.ImportMatchDataLabel.Text = "Import Match Data";
+            this.ImportMatchDataLabel.Click += new System.EventHandler(this.ImportMatchDataLabel_Click);
             // 
             // devicePath
             // 
-            this.devicePath.Location = new System.Drawing.Point(177, 260);
+            this.devicePath.Location = new System.Drawing.Point(177, 288);
             this.devicePath.Name = "devicePath";
             this.devicePath.Size = new System.Drawing.Size(268, 20);
             this.devicePath.TabIndex = 19;
@@ -186,7 +188,7 @@
             // ChooseDeviceButton
             // 
             this.ChooseDeviceButton.ForeColor = System.Drawing.Color.Black;
-            this.ChooseDeviceButton.Location = new System.Drawing.Point(37, 260);
+            this.ChooseDeviceButton.Location = new System.Drawing.Point(37, 288);
             this.ChooseDeviceButton.Name = "ChooseDeviceButton";
             this.ChooseDeviceButton.Size = new System.Drawing.Size(120, 20);
             this.ChooseDeviceButton.TabIndex = 18;
@@ -197,7 +199,7 @@
             // importButton
             // 
             this.importButton.ForeColor = System.Drawing.Color.Black;
-            this.importButton.Location = new System.Drawing.Point(147, 334);
+            this.importButton.Location = new System.Drawing.Point(200, 321);
             this.importButton.Name = "importButton";
             this.importButton.Size = new System.Drawing.Size(100, 23);
             this.importButton.TabIndex = 20;
@@ -208,7 +210,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::_624_Scouting_Application.Properties.Resources._30x30_Loading;
-            this.pictureBox2.Location = new System.Drawing.Point(253, 330);
+            this.pictureBox2.Location = new System.Drawing.Point(306, 317);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(30, 30);
             this.pictureBox2.TabIndex = 34;
@@ -221,7 +223,7 @@
             this.radioButton1.BackColor = System.Drawing.Color.Black;
             this.radioButton1.Checked = true;
             this.radioButton1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.radioButton1.Location = new System.Drawing.Point(118, 299);
+            this.radioButton1.Location = new System.Drawing.Point(177, 259);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(81, 17);
             this.radioButton1.TabIndex = 0;
@@ -234,12 +236,24 @@
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.ForeColor = System.Drawing.Color.White;
-            this.radioButton2.Location = new System.Drawing.Point(214, 299);
+            this.radioButton2.Location = new System.Drawing.Point(273, 259);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(63, 17);
             this.radioButton2.TabIndex = 1;
             this.radioButton2.Text = "Pit Data";
             this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(240)))), ((int)(((byte)(0)))));
+            this.label1.Location = new System.Drawing.Point(78, 257);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(79, 18);
+            this.label1.TabIndex = 37;
+            this.label1.Text = "Data Type:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Form1
             // 
@@ -247,7 +261,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(499, 585);
+            this.ClientSize = new System.Drawing.Size(499, 538);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.pictureBox4);
@@ -269,7 +284,8 @@
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(500, 519);
+            this.MaximumSize = new System.Drawing.Size(515, 577);
+            this.MinimumSize = new System.Drawing.Size(515, 577);
             this.Name = "Form1";
             this.Text = "624 Scouting Manager";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -301,6 +317,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.Label label1;
     }
 }
 

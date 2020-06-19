@@ -16,6 +16,7 @@ from os.path import isfile, join
 
 
 username = os.getlogin()
+print(sys.argv[1])
 file = open(sys.argv[1])
 json_data = json.load(file)
 
@@ -23,7 +24,9 @@ print(sys.argv[2])
 
 if sys.argv[2]=='True':
     try:
-      full_data = pd.read_csv(filepath_or_buffer=f'C:\\Users\\{username}\\Desktop\\MatchData.csv')
+      full_data = pd.read_csv(filepath_or_buffer=fr'C:\Users\{username}\Desktop\Match Data.csv')
+      
+      #full_data = pd.read_csv(filepath_or_buffer=fr'C:\New Folder\Match Data.csv')
       for i in json_data:
         full_data = full_data.append(i,ignore_index=True)
     
@@ -44,12 +47,13 @@ if sys.argv[2]=='True':
         index-=1
       index+=1
 
-    full_data.to_csv(f'C:\\Users\\{username}\\Desktop\\MatchData.csv', index=False)
+    full_data.to_csv(fr'C:\Users\{username}\Desktop\Match Data.csv', index=False)
+    #full_data.to_csv(fr'C:\New Folder\Match Data.csv', index=False)
 
 
 else:
     try:
-      full_data = pd.read_csv(filepath_or_buffer=f'C:\\Users\\{username}\\Desktop\\PitData.csv')
+      full_data = pd.read_csv(filepath_or_buffer=fr'C:\Users\{username}\Desktop\Pit Data.csv')
       for i in json_data:
         full_data = full_data.append(i,ignore_index=True)
     
@@ -70,7 +74,7 @@ else:
         index-=1
       index+=1
 
-    full_data.to_csv(f'C:\\Users\\{username}\\Desktop\\PitData.csv', index=False)
+    full_data.to_csv(fr'C:\Users\{username}\Desktop\Pit Data.csv', index=False)
 
 
 print("yeet")

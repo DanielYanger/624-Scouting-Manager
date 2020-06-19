@@ -64,18 +64,18 @@ namespace _624_Scouting_Application
             try
             {
                     psi.FileName = PythonExeText.Text;
-                    var folder_path = devicePath.Text;
-                    String path = @"D:\Documents\GitHub\624-Scouting\624-Scouting-Installer\624-Scouting-Application\merging.py";
-                    //String path = @Application.StartupPath + @"\merging.py";
+                    var folder_path = @devicePath.Text;
+                    //String path = @"D:\Documents\GitHub\624-Scouting\624-Scouting-Installer\624-Scouting-Application\merging.py";
+                    String path = @Application.StartupPath + @"\merging.py";
                     string arg;
                     if (radioButton1.Checked)
                     {
-                         arg = string.Format(" \"{0}\" {1} {2}", path, folder_path, true);
+                         arg = string.Format(" \"{0}\" \"{1}\" {2}", path, folder_path, true);
                     }
                     
                     else
                     {
-                         arg = string.Format(" \"{0}\" {1} {2}", path, folder_path, false);
+                         arg = string.Format(" \"{0}\" \"{1}\" {2}", path, folder_path, false);
                     }
                     psi.Arguments = arg;
                     psi.UseShellExecute = false;
@@ -95,7 +95,7 @@ namespace _624_Scouting_Application
                     }
                     else
                     {
-                        MessageBox.Show("The program did not execute successfully. Please ensure the proper folder is selected. \n" + errors);
+                        MessageBox.Show("The program did not execute successfully. Please ensure the proper folder is selected.");
                     }
                 
                 
@@ -188,6 +188,16 @@ namespace _624_Scouting_Application
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ImportMatchDataLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
