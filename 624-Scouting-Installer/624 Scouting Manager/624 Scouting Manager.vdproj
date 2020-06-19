@@ -297,15 +297,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:624 Scouting Manager"
-        "ProductCode" = "8:{A9DD4365-6485-4AFF-AF88-6F22A747C695}"
-        "PackageCode" = "8:{55F4865A-0856-4B32-A8EB-9B17245DBB80}"
+        "ProductCode" = "8:{E1219632-80A9-4DFC-A5F4-EFDA4E19ABD4}"
+        "PackageCode" = "8:{D41F5EA1-186A-45A5-93A3-C399E685FA79}"
         "UpgradeCode" = "8:{6A4680E3-2022-425E-AE6C-A31B9302BA54}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.5.0"
+        "ProductVersion" = "8:1.5.1"
         "Manufacturer" = "8:FRC Team 624"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -847,7 +847,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_A01AAAE449474C51AE7F47380CCC6634"
             {
-            "SourcePath" = "8:"
+            "SourcePath" = "8:..\\624-Scouting-Application\\obj\\Release\\624 Scouting Application.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_BEE4397E419748899D1427948B2E8D1F"
