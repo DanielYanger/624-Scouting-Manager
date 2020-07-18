@@ -13,7 +13,7 @@ Once you have installed all the necessary components, you can proceed to use the
 Using the file navigator, select the python.exe file from your computer. This should always be the first step as the other options will not execute without it.
 
 ### Import Data
-WIP: More testing needs to be done in regards to how a tablet is mounted by Windows.
+Select the file that you wish to import by navigating to the location of the data on the tablet and select whether it is pit data or match data. Click import and wait. If you have just installed puthon, it may take a moment as it installs the pandas library. The CSV will appear on your desktop. 
 
 ### Generate Schedule
 For this option, you will need 2 things: Your TBA v3 API key and the event code. The API key can be aquired on your TBA account page. For the event code, it is the year of the event combined with the code that appears when searching up an event in TBA. For example, the 2019 Newton divison event code would be 2019new. Note that the code should be lowercase. 
