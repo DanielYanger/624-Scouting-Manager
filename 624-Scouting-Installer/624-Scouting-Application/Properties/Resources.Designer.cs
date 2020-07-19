@@ -73,9 +73,29 @@ namespace _624_Scouting_Application.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _624_loading {
+            get {
+                object obj = ResourceManager.GetObject("624 loading", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _624HD_Transparent {
             get {
                 object obj = ResourceManager.GetObject("624HD_Transparent", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap scouting_manager_banner {
+            get {
+                object obj = ResourceManager.GetObject("scouting manager banner", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

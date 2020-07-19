@@ -21,12 +21,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_67124ECC1B954E9E9B631E57C8D05331"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_A01AAAE449474C51AE7F47380CCC6634"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -34,6 +28,12 @@
         "Entry"
         {
         "MsmKey" = "8:_A2DBFA32CDB546B8BD0ABD64F504BD17"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D3F2FA60ED8A43BFA3D13226CAAC1F0C"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -170,10 +170,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_67124ECC1B954E9E9B631E57C8D05331"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A2DBFA32CDB546B8BD0ABD64F504BD17"
             {
-            "SourcePath" = "8:..\\CR_thicker.ico"
-            "TargetName" = "8:CR_thicker.ico"
+            "SourcePath" = "8:..\\624-Scouting-Application\\Scouting.py"
+            "TargetName" = "8:Scouting.py"
             "Tag" = "8:"
             "Folder" = "8:_BEE4397E419748899D1427948B2E8D1F"
             "Condition" = "8:"
@@ -190,10 +190,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A2DBFA32CDB546B8BD0ABD64F504BD17"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D3F2FA60ED8A43BFA3D13226CAAC1F0C"
             {
-            "SourcePath" = "8:..\\624-Scouting-Application\\Scouting.py"
-            "TargetName" = "8:Scouting.py"
+            "SourcePath" = "8:D:\\Downloads\\Finished Scouting Icons\\624 Icon.ico"
+            "TargetName" = "8:624Icon.ico"
             "Tag" = "8:"
             "Folder" = "8:_BEE4397E419748899D1427948B2E8D1F"
             "Condition" = "8:"
@@ -297,15 +297,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:624 Scouting Manager"
-        "ProductCode" = "8:{E1219632-80A9-4DFC-A5F4-EFDA4E19ABD4}"
-        "PackageCode" = "8:{D41F5EA1-186A-45A5-93A3-C399E685FA79}"
+        "ProductCode" = "8:{D09382B1-2ADB-44F5-93CB-3D196645BE8A}"
+        "PackageCode" = "8:{F3508054-0BF3-4D32-99F1-400D1C8C01FE}"
         "UpgradeCode" = "8:{6A4680E3-2022-425E-AE6C-A31B9302BA54}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.5.1"
+        "ProductVersion" = "8:1.6.0"
         "Manufacturer" = "8:FRC Team 624"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -315,7 +315,7 @@
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:frc624.org"
-        "ARPPRODUCTICON" = "8:_67124ECC1B954E9E9B631E57C8D05331"
+        "ARPPRODUCTICON" = "8:"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
@@ -429,7 +429,7 @@
             "Target" = "8:_A01AAAE449474C51AE7F47380CCC6634"
             "Folder" = "8:_ABE40E0AD9A54CBAB3578697412D56DC"
             "WorkingFolder" = "8:_BEE4397E419748899D1427948B2E8D1F"
-            "Icon" = "8:_67124ECC1B954E9E9B631E57C8D05331"
+            "Icon" = "8:_D3F2FA60ED8A43BFA3D13226CAAC1F0C"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_D0E1572828914658AE3A211215E90655"
@@ -443,7 +443,7 @@
             "Target" = "8:_A01AAAE449474C51AE7F47380CCC6634"
             "Folder" = "8:_54B5715C797A4170B53517E0FDBB3634"
             "WorkingFolder" = "8:_BEE4397E419748899D1427948B2E8D1F"
-            "Icon" = "8:_67124ECC1B954E9E9B631E57C8D05331"
+            "Icon" = "8:_D3F2FA60ED8A43BFA3D13226CAAC1F0C"
             "Feature" = "8:"
             }
         }

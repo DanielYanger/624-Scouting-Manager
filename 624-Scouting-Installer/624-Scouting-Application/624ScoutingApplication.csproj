@@ -102,13 +102,14 @@
     <None Include="Resources\text_green.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CR_thicker.ico" />
     <AdditionalFiles Include="merging.py">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </AdditionalFiles>
     <AdditionalFiles Include="Scouting.py">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </AdditionalFiles>
+    <None Include="Resources\624 loading.gif" />
+    <None Include="Resources\scouting manager banner.png" />
     <None Include="Resources\30x30 Loading.gif" />
   </ItemGroup>
   <ItemGroup>
@@ -122,6 +123,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="624 Icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
