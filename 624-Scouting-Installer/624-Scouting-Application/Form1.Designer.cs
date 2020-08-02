@@ -33,8 +33,6 @@
             this.PythonExeText = new System.Windows.Forms.TextBox();
             this.PythonExeButton = new System.Windows.Forms.Button();
             this.scheduleGeneratorButton = new System.Windows.Forms.Button();
-            this.apiKeyLabel = new System.Windows.Forms.Label();
-            this.apiKeyText = new System.Windows.Forms.TextBox();
             this.eventCodeLabel = new System.Windows.Forms.Label();
             this.eventCodeText = new System.Windows.Forms.TextBox();
             this.sechduleLabel = new System.Windows.Forms.Label();
@@ -89,7 +87,7 @@
             // scheduleGeneratorButton
             // 
             this.scheduleGeneratorButton.ForeColor = System.Drawing.Color.Black;
-            this.scheduleGeneratorButton.Location = new System.Drawing.Point(200, 561);
+            this.scheduleGeneratorButton.Location = new System.Drawing.Point(200, 540);
             this.scheduleGeneratorButton.Name = "scheduleGeneratorButton";
             this.scheduleGeneratorButton.Size = new System.Drawing.Size(100, 23);
             this.scheduleGeneratorButton.TabIndex = 28;
@@ -97,31 +95,12 @@
             this.scheduleGeneratorButton.UseVisualStyleBackColor = true;
             this.scheduleGeneratorButton.Click += new System.EventHandler(this.scheduleGeneratorButton_Click);
             // 
-            // apiKeyLabel
-            // 
-            this.apiKeyLabel.AutoSize = true;
-            this.apiKeyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.apiKeyLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(240)))), ((int)(((byte)(0)))));
-            this.apiKeyLabel.Location = new System.Drawing.Point(94, 512);
-            this.apiKeyLabel.Name = "apiKeyLabel";
-            this.apiKeyLabel.Size = new System.Drawing.Size(63, 18);
-            this.apiKeyLabel.TabIndex = 27;
-            this.apiKeyLabel.Text = "API Key:";
-            this.apiKeyLabel.Click += new System.EventHandler(this.apiKeyLabel_Click);
-            // 
-            // apiKeyText
-            // 
-            this.apiKeyText.Location = new System.Drawing.Point(177, 513);
-            this.apiKeyText.Name = "apiKeyText";
-            this.apiKeyText.Size = new System.Drawing.Size(268, 20);
-            this.apiKeyText.TabIndex = 26;
-            // 
             // eventCodeLabel
             // 
             this.eventCodeLabel.AutoSize = true;
             this.eventCodeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.eventCodeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(240)))), ((int)(((byte)(0)))));
-            this.eventCodeLabel.Location = new System.Drawing.Point(68, 457);
+            this.eventCodeLabel.Location = new System.Drawing.Point(68, 493);
             this.eventCodeLabel.Name = "eventCodeLabel";
             this.eventCodeLabel.Size = new System.Drawing.Size(89, 18);
             this.eventCodeLabel.TabIndex = 25;
@@ -130,7 +109,7 @@
             // 
             // eventCodeText
             // 
-            this.eventCodeText.Location = new System.Drawing.Point(177, 455);
+            this.eventCodeText.Location = new System.Drawing.Point(177, 491);
             this.eventCodeText.Name = "eventCodeText";
             this.eventCodeText.Size = new System.Drawing.Size(268, 20);
             this.eventCodeText.TabIndex = 24;
@@ -140,7 +119,7 @@
             this.sechduleLabel.AutoSize = true;
             this.sechduleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sechduleLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(240)))), ((int)(((byte)(0)))));
-            this.sechduleLabel.Location = new System.Drawing.Point(17, 424);
+            this.sechduleLabel.Location = new System.Drawing.Point(17, 460);
             this.sechduleLabel.Name = "sechduleLabel";
             this.sechduleLabel.Size = new System.Drawing.Size(153, 20);
             this.sechduleLabel.TabIndex = 23;
@@ -228,7 +207,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::_624_Scouting_Application.Properties.Resources._624_loading;
-            this.pictureBox4.Location = new System.Drawing.Point(287, 512);
+            this.pictureBox4.Location = new System.Drawing.Point(287, 493);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(125, 125);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -238,7 +217,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::_624_Scouting_Application.Properties.Resources._624_loading;
-            this.pictureBox2.Location = new System.Drawing.Point(287, 338);
+            this.pictureBox2.Location = new System.Drawing.Point(287, 343);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(125, 125);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -267,8 +246,6 @@
             this.Controls.Add(this.scheduleGeneratorButton);
             this.Controls.Add(this.importButton);
             this.Controls.Add(this.devicePath);
-            this.Controls.Add(this.apiKeyLabel);
-            this.Controls.Add(this.apiKeyText);
             this.Controls.Add(this.eventCodeLabel);
             this.Controls.Add(this.eventCodeText);
             this.Controls.Add(this.label1);
@@ -305,8 +282,6 @@
         private System.Windows.Forms.TextBox PythonExeText;
         private System.Windows.Forms.Button PythonExeButton;
         private System.Windows.Forms.Button scheduleGeneratorButton;
-        private System.Windows.Forms.Label apiKeyLabel;
-        private System.Windows.Forms.TextBox apiKeyText;
         private System.Windows.Forms.Label eventCodeLabel;
         private System.Windows.Forms.TextBox eventCodeText;
         private System.Windows.Forms.Label sechduleLabel;

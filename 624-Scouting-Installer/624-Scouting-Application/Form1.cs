@@ -2,7 +2,11 @@
 using System.Threading.Tasks;
 using System.Diagnostics;
 using System.Windows.Forms;
-
+using System.Net;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace _624_Scouting_Application
 {
@@ -23,6 +27,8 @@ namespace _624_Scouting_Application
 
         //File Browser
         OpenFileDialog fd = new OpenFileDialog();
+
+
 
         //Python.exe Button
         private void PythonExeButton_Click(object sender, EventArgs e)
@@ -137,39 +143,85 @@ namespace _624_Scouting_Application
 
         private void Schedule()
         {
+           
+            string schedule = GetSchedule(eventCodeText.Text).GetAwaiter().GetResult();
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            path += @"\schedule.txt";
+            Console.WriteLine(path);
+            System.IO.File.WriteAllText(@path, schedule);
+
+        }
+
+        public class Match
+        {
+            public string comp_level { get; set; }
+            public int match_number { get; set; }
+            public Alliances alliances { get; set; }
+        }
+
+        public class MatchSorter : Comparer<Match>
+        {
+            public override int Compare(Match x, Match y)
+            {
+                return x.match_number.CompareTo(y.match_number);
+            }
+        }
+
+        public class Alliances
+        {
+            public Alliance red { get; set; }
+            public Alliance blue { get; set; }
+        }
+
+        public class Alliance
+        {
+            public List<string> team_keys { get; set; }
+        }
+
+
+        static async Task<string> GetSchedule(string eventCode)
+        {
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("https://www.thebluealliance.com/api/v3/");
+            client.DefaultRequestHeaders.Accept.Clear();
+            client.DefaultRequestHeaders.Accept.Add(
+                new MediaTypeWithQualityHeaderValue("application/json"));
+            client.DefaultRequestHeaders.Add("X-TBA-Auth-Key", "b19JEnA7OC6MKFQboTBIOMfHPuGm7lTo15thl1i08fkThnSON14oN36VtDUlsCsn");
+            string finalScheulde = "";
+
             try
             {
-                psi.FileName = PythonExeText.Text;
-                var api_key = apiKeyText.Text;
-                var event_key = eventCodeText.Text;
-                String path = @Application.StartupPath + @"\Scouting.py";
-                string arg = string.Format(" \"{0}\" {1} {2}", @path, event_key, api_key);
-                psi.Arguments = arg;
-                psi.UseShellExecute = false;
-                psi.CreateNoWindow = true;
-                psi.RedirectStandardOutput = true;
-                psi.RedirectStandardError = true;
-                var errors = "";
-                var results = "";
-                using (var process = Process.Start(psi))
+                HttpResponseMessage response = await client.GetAsync("event/" + eventCode + "/matches/simple");
+                if(response.IsSuccessStatusCode)
                 {
-                    errors = process.StandardError.ReadToEnd();
-                    results = process.StandardOutput.ReadToEnd();
+                    var jsonFile = await response.Content.ReadAsAsync<List<Match>>();
+                    jsonFile.Sort(new MatchSorter());
+                    foreach(Match match in jsonFile)
+                    {
+                        if(match.comp_level=="qm")
+                        {
+                            string match_number = "Match " + match.match_number+",";
+                            
+                            foreach(string team in match.alliances.red.team_keys)
+                            {
+                                string temp = match_number + team.Substring(3) + ";";
+                                finalScheulde += temp;
+                            }
+                            foreach (string team in match.alliances.blue.team_keys)
+                            {
+                                string temp = match_number + team.Substring(3) + ";";
+                                finalScheulde += temp;
+                            }
+                        }
+                    }
                 }
-                if (results.Contains("200"))
-                {
-                    MessageBox.Show("The program successfully executed. The schedule can be found on your desktop." );
-                }
-                else
-                {
-                    MessageBox.Show("The program did not execute successfully. Double check your API key and event code. \n" + errors);
-                }
-
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show("Error: Something went wrong. Please ensure everything is correct and try again. \n" + ex.ToString());
+                Console.WriteLine("Big oof");
             }
+            return finalScheulde;
+
         }
 
         private void PythonEngineLabel_Click(object sender, EventArgs e)

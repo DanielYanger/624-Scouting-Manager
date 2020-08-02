@@ -18,3 +18,8 @@ D:\Documents\GitHub\624-Scouting\624-Scouting-Installer\624-Scouting-Application
 D:\Documents\GitHub\624-Scouting\624-Scouting-Installer\624-Scouting-Application\obj\Debug\624ScoutingApplication.csproj.CoreCompileInputs.cache
 D:\Documents\GitHub\624-Scouting\624-Scouting-Installer\624-Scouting-Application\obj\Debug\624 Scouting Application.exe
 D:\Documents\GitHub\624-Scouting\624-Scouting-Installer\624-Scouting-Application\obj\Debug\624 Scouting Application.pdb
+D:\Documents\GitHub\624-Scouting\624-Scouting-Installer\624-Scouting-Application\bin\Debug\Newtonsoft.Json.dll
+D:\Documents\GitHub\624-Scouting\624-Scouting-Installer\624-Scouting-Application\bin\Debug\System.Net.Http.Formatting.dll
+D:\Documents\GitHub\624-Scouting\624-Scouting-Installer\624-Scouting-Application\bin\Debug\Newtonsoft.Json.xml
+D:\Documents\GitHub\624-Scouting\624-Scouting-Installer\624-Scouting-Application\bin\Debug\System.Net.Http.Formatting.xml
+D:\Documents\GitHub\624-Scouting\624-Scouting-Installer\624-Scouting-Application\obj\Debug\624ScoutingApplication.csproj.CopyComplete
