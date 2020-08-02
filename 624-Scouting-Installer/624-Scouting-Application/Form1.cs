@@ -16,6 +16,7 @@ namespace _624_Scouting_Application
         {
             InitializeComponent();
             pictureBox2.Visible = false;
+            pictureBox3.Visible = false;
             pictureBox4.Visible = false;
         }
 
@@ -149,6 +150,8 @@ namespace _624_Scouting_Application
             path += @"\schedule.txt";
             Console.WriteLine(path);
             System.IO.File.WriteAllText(@path, schedule);
+            MessageBox.Show("Success. The schedule can be found on your desktop.");
+
 
         }
 
@@ -253,5 +256,73 @@ namespace _624_Scouting_Application
         {
 
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private async void button1_Click(object sender, EventArgs e)
+        {
+            // start the waiting animation
+            pictureBox3.Visible = true;
+
+            // simply start and await the loading task
+            team_list_button.Enabled = false;
+            await Task.Run(() => TeamList());
+
+            // re-enable things
+            team_list_button.Enabled = true;
+            pictureBox3.Visible = false;
+        }
+
+        private void TeamList()
+        {
+
+            string teamList = GetTeamList(textBox1.Text).GetAwaiter().GetResult();
+            Console.WriteLine(teamList);
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            path += @"\teamList.txt";
+            System.IO.File.WriteAllText(@path, teamList);
+            MessageBox.Show("Success. The team list can be found on your desktop.");
+
+        }
+
+
+        public class Team
+        {
+            public int team_number { get; set; }
+        }
+
+        static async Task<string> GetTeamList(string eventCode)
+        {
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("https://www.thebluealliance.com/api/v3/");
+            client.DefaultRequestHeaders.Accept.Clear();
+            client.DefaultRequestHeaders.Accept.Add(
+                new MediaTypeWithQualityHeaderValue("application/json"));
+            client.DefaultRequestHeaders.Add("X-TBA-Auth-Key", "b19JEnA7OC6MKFQboTBIOMfHPuGm7lTo15thl1i08fkThnSON14oN36VtDUlsCsn");
+            string finalTeamList = "TEAM LIST;";
+
+            try
+            {
+                HttpResponseMessage response = await client.GetAsync("event/" + eventCode + "/teams/simple");
+                if (response.IsSuccessStatusCode)
+                {
+                    var jsonFile = await response.Content.ReadAsAsync<List<Team>>();
+                    foreach (Team team in jsonFile)
+                    {
+                        finalTeamList += team.team_number+";";
+                    }
+                }
+            }
+            catch
+            {
+                Console.WriteLine("Big oof");
+            }
+            return finalTeamList;
+
+        }
+
     }
 }

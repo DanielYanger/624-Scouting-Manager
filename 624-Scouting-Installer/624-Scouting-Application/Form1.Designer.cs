@@ -46,9 +46,15 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.team_list_button = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // PythonEngineLabel
@@ -66,7 +72,7 @@
             // 
             // PythonExeText
             // 
-            this.PythonExeText.Location = new System.Drawing.Point(177, 201);
+            this.PythonExeText.Location = new System.Drawing.Point(177, 167);
             this.PythonExeText.Name = "PythonExeText";
             this.PythonExeText.Size = new System.Drawing.Size(268, 20);
             this.PythonExeText.TabIndex = 30;
@@ -76,7 +82,7 @@
             // 
             this.PythonExeButton.BackColor = System.Drawing.Color.Transparent;
             this.PythonExeButton.ForeColor = System.Drawing.Color.Black;
-            this.PythonExeButton.Location = new System.Drawing.Point(37, 201);
+            this.PythonExeButton.Location = new System.Drawing.Point(37, 167);
             this.PythonExeButton.Name = "PythonExeButton";
             this.PythonExeButton.Size = new System.Drawing.Size(120, 20);
             this.PythonExeButton.TabIndex = 29;
@@ -87,7 +93,7 @@
             // scheduleGeneratorButton
             // 
             this.scheduleGeneratorButton.ForeColor = System.Drawing.Color.Black;
-            this.scheduleGeneratorButton.Location = new System.Drawing.Point(200, 540);
+            this.scheduleGeneratorButton.Location = new System.Drawing.Point(200, 453);
             this.scheduleGeneratorButton.Name = "scheduleGeneratorButton";
             this.scheduleGeneratorButton.Size = new System.Drawing.Size(100, 23);
             this.scheduleGeneratorButton.TabIndex = 28;
@@ -100,7 +106,7 @@
             this.eventCodeLabel.AutoSize = true;
             this.eventCodeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.eventCodeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(240)))), ((int)(((byte)(0)))));
-            this.eventCodeLabel.Location = new System.Drawing.Point(68, 493);
+            this.eventCodeLabel.Location = new System.Drawing.Point(68, 406);
             this.eventCodeLabel.Name = "eventCodeLabel";
             this.eventCodeLabel.Size = new System.Drawing.Size(89, 18);
             this.eventCodeLabel.TabIndex = 25;
@@ -109,7 +115,7 @@
             // 
             // eventCodeText
             // 
-            this.eventCodeText.Location = new System.Drawing.Point(177, 491);
+            this.eventCodeText.Location = new System.Drawing.Point(177, 404);
             this.eventCodeText.Name = "eventCodeText";
             this.eventCodeText.Size = new System.Drawing.Size(268, 20);
             this.eventCodeText.TabIndex = 24;
@@ -119,7 +125,7 @@
             this.sechduleLabel.AutoSize = true;
             this.sechduleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sechduleLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(240)))), ((int)(((byte)(0)))));
-            this.sechduleLabel.Location = new System.Drawing.Point(17, 460);
+            this.sechduleLabel.Location = new System.Drawing.Point(17, 373);
             this.sechduleLabel.Name = "sechduleLabel";
             this.sechduleLabel.Size = new System.Drawing.Size(153, 20);
             this.sechduleLabel.TabIndex = 23;
@@ -130,7 +136,7 @@
             this.ImportMatchDataLabel.AutoSize = true;
             this.ImportMatchDataLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ImportMatchDataLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(240)))), ((int)(((byte)(0)))));
-            this.ImportMatchDataLabel.Location = new System.Drawing.Point(17, 256);
+            this.ImportMatchDataLabel.Location = new System.Drawing.Point(17, 201);
             this.ImportMatchDataLabel.Name = "ImportMatchDataLabel";
             this.ImportMatchDataLabel.Size = new System.Drawing.Size(142, 20);
             this.ImportMatchDataLabel.TabIndex = 22;
@@ -139,7 +145,7 @@
             // 
             // devicePath
             // 
-            this.devicePath.Location = new System.Drawing.Point(177, 338);
+            this.devicePath.Location = new System.Drawing.Point(177, 283);
             this.devicePath.Name = "devicePath";
             this.devicePath.Size = new System.Drawing.Size(268, 20);
             this.devicePath.TabIndex = 19;
@@ -147,7 +153,7 @@
             // ChooseDeviceButton
             // 
             this.ChooseDeviceButton.ForeColor = System.Drawing.Color.Black;
-            this.ChooseDeviceButton.Location = new System.Drawing.Point(39, 338);
+            this.ChooseDeviceButton.Location = new System.Drawing.Point(39, 283);
             this.ChooseDeviceButton.Name = "ChooseDeviceButton";
             this.ChooseDeviceButton.Size = new System.Drawing.Size(120, 20);
             this.ChooseDeviceButton.TabIndex = 18;
@@ -158,7 +164,7 @@
             // importButton
             // 
             this.importButton.ForeColor = System.Drawing.Color.Black;
-            this.importButton.Location = new System.Drawing.Point(200, 386);
+            this.importButton.Location = new System.Drawing.Point(200, 331);
             this.importButton.Name = "importButton";
             this.importButton.Size = new System.Drawing.Size(100, 23);
             this.importButton.TabIndex = 20;
@@ -172,7 +178,7 @@
             this.radioButton1.BackColor = System.Drawing.Color.Black;
             this.radioButton1.Checked = true;
             this.radioButton1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.radioButton1.Location = new System.Drawing.Point(177, 295);
+            this.radioButton1.Location = new System.Drawing.Point(177, 240);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(81, 17);
             this.radioButton1.TabIndex = 0;
@@ -185,7 +191,7 @@
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.ForeColor = System.Drawing.Color.White;
-            this.radioButton2.Location = new System.Drawing.Point(273, 295);
+            this.radioButton2.Location = new System.Drawing.Point(273, 240);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(63, 17);
             this.radioButton2.TabIndex = 1;
@@ -197,7 +203,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(240)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(78, 293);
+            this.label1.Location = new System.Drawing.Point(78, 238);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 18);
             this.label1.TabIndex = 37;
@@ -207,7 +213,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::_624_Scouting_Application.Properties.Resources._624_loading;
-            this.pictureBox4.Location = new System.Drawing.Point(287, 493);
+            this.pictureBox4.Location = new System.Drawing.Point(287, 406);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(125, 125);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -217,7 +223,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::_624_Scouting_Application.Properties.Resources._624_loading;
-            this.pictureBox2.Location = new System.Drawing.Point(287, 343);
+            this.pictureBox2.Location = new System.Drawing.Point(287, 288);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(125, 125);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -236,6 +242,57 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.WaitOnLoad = true;
             // 
+            // team_list_button
+            // 
+            this.team_list_button.ForeColor = System.Drawing.Color.Black;
+            this.team_list_button.Location = new System.Drawing.Point(200, 571);
+            this.team_list_button.Name = "team_list_button";
+            this.team_list_button.Size = new System.Drawing.Size(100, 23);
+            this.team_list_button.TabIndex = 38;
+            this.team_list_button.Text = "Generate";
+            this.team_list_button.UseVisualStyleBackColor = true;
+            this.team_list_button.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::_624_Scouting_Application.Properties.Resources._624_loading;
+            this.pictureBox3.Location = new System.Drawing.Point(287, 526);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(125, 125);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 39;
+            this.pictureBox3.TabStop = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(177, 526);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(268, 20);
+            this.textBox1.TabIndex = 40;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(240)))), ((int)(((byte)(0)))));
+            this.label2.Location = new System.Drawing.Point(17, 489);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(155, 20);
+            this.label2.TabIndex = 41;
+            this.label2.Text = "Team List Generator";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(240)))), ((int)(((byte)(0)))));
+            this.label3.Location = new System.Drawing.Point(68, 526);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(89, 18);
+            this.label3.TabIndex = 42;
+            this.label3.Text = "Event Code:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -243,6 +300,11 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(499, 624);
+            this.Controls.Add(this.team_list_button);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.scheduleGeneratorButton);
             this.Controls.Add(this.importButton);
             this.Controls.Add(this.devicePath);
@@ -271,6 +333,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -295,6 +358,11 @@
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button team_list_button;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
 
