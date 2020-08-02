@@ -15,7 +15,31 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_1496107F6C4A0B0B916103625A4213F4"
+        "OwnerKey" = "8:_A01AAAE449474C51AE7F47380CCC6634"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_18E4A61371664F510A740FC49DD2AB8E"
+        "OwnerKey" = "8:_1496107F6C4A0B0B916103625A4213F4"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_18E4A61371664F510A740FC49DD2AB8E"
+        "OwnerKey" = "8:_A01AAAE449474C51AE7F47380CCC6634"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_5913CDC0036D4FA79B53DFF0FEA05CF0"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_6A5AE951924041DCA09D06E6915F9E60"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -27,8 +51,8 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_D3F2FA60ED8A43BFA3D13226CAAC1F0C"
-        "OwnerKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_C62859CEDFBA5C16D36D10426DDAC152"
+        "OwnerKey" = "8:_1496107F6C4A0B0B916103625A4213F4"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -41,6 +65,24 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_A01AAAE449474C51AE7F47380CCC6634"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_1496107F6C4A0B0B916103625A4213F4"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_18E4A61371664F510A740FC49DD2AB8E"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_C62859CEDFBA5C16D36D10426DDAC152"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -144,6 +186,68 @@
         }
         "File"
         {
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_1496107F6C4A0B0B916103625A4213F4"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_1496107F6C4A0B0B916103625A4213F4"
+                    {
+                    "Name" = "8:System.Net.Http.Formatting.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:System.Net.Http.Formatting.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_BEE4397E419748899D1427948B2E8D1F"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_18E4A61371664F510A740FC49DD2AB8E"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_18E4A61371664F510A740FC49DD2AB8E"
+                    {
+                    "Name" = "8:Newtonsoft.Json.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Newtonsoft.Json.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_BEE4397E419748899D1427948B2E8D1F"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5913CDC0036D4FA79B53DFF0FEA05CF0"
             {
             "SourcePath" = "8:..\\624-Scouting-Application\\merging.py"
@@ -164,9 +268,9 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D3F2FA60ED8A43BFA3D13226CAAC1F0C"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6A5AE951924041DCA09D06E6915F9E60"
             {
-            "SourcePath" = "8:D:\\Downloads\\Finished Scouting Icons\\624 Icon.ico"
+            "SourcePath" = "8:..\\624-Scouting-Application\\624Icon.ico"
             "TargetName" = "8:624Icon.ico"
             "Tag" = "8:"
             "Folder" = "8:_BEE4397E419748899D1427948B2E8D1F"
@@ -182,6 +286,37 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_C62859CEDFBA5C16D36D10426DDAC152"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:TRUE"
+            "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_C62859CEDFBA5C16D36D10426DDAC152"
+                    {
+                    "Name" = "8:System.Net.Http.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:System.Net.Http.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_BEE4397E419748899D1427948B2E8D1F"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_DD2FBB7BB5858A684796E1ADC80379C7"
@@ -271,15 +406,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:624 Scouting Manager"
-        "ProductCode" = "8:{D09382B1-2ADB-44F5-93CB-3D196645BE8A}"
-        "PackageCode" = "8:{F3508054-0BF3-4D32-99F1-400D1C8C01FE}"
+        "ProductCode" = "8:{D8A257C8-70EF-484A-9CE7-79712E1DDAC2}"
+        "PackageCode" = "8:{DB9DB373-83EB-4C22-97FB-DC363FB8400E}"
         "UpgradeCode" = "8:{6A4680E3-2022-425E-AE6C-A31B9302BA54}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.6.0"
+        "ProductVersion" = "8:1.7.0"
         "Manufacturer" = "8:FRC Team 624"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -403,7 +538,7 @@
             "Target" = "8:_A01AAAE449474C51AE7F47380CCC6634"
             "Folder" = "8:_ABE40E0AD9A54CBAB3578697412D56DC"
             "WorkingFolder" = "8:_BEE4397E419748899D1427948B2E8D1F"
-            "Icon" = "8:_D3F2FA60ED8A43BFA3D13226CAAC1F0C"
+            "Icon" = "8:_6A5AE951924041DCA09D06E6915F9E60"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_D0E1572828914658AE3A211215E90655"
@@ -417,7 +552,7 @@
             "Target" = "8:_A01AAAE449474C51AE7F47380CCC6634"
             "Folder" = "8:_54B5715C797A4170B53517E0FDBB3634"
             "WorkingFolder" = "8:_BEE4397E419748899D1427948B2E8D1F"
-            "Icon" = "8:_D3F2FA60ED8A43BFA3D13226CAAC1F0C"
+            "Icon" = "8:_6A5AE951924041DCA09D06E6915F9E60"
             "Feature" = "8:"
             }
         }
@@ -821,7 +956,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_A01AAAE449474C51AE7F47380CCC6634"
             {
-            "SourcePath" = "8:..\\624-Scouting-Application\\obj\\Debug\\624 Scouting Application.exe"
+            "SourcePath" = "8:..\\624-Scouting-Application\\obj\\Release\\624 Scouting Application.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_BEE4397E419748899D1427948B2E8D1F"
