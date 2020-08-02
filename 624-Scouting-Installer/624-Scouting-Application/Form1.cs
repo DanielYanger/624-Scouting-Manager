@@ -2,11 +2,12 @@
 using System.Threading.Tasks;
 using System.Diagnostics;
 using System.Windows.Forms;
-using System.Net;
+using System.IO;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
 namespace _624_Scouting_Application
 {
@@ -32,13 +33,6 @@ namespace _624_Scouting_Application
 
 
         //Python.exe Button
-        private void PythonExeButton_Click(object sender, EventArgs e)
-        {
-            if (fd.ShowDialog() == DialogResult.OK)
-            {
-                PythonExeText.Text = fd.FileName;
-            }
-        }
 
         //Choose Device Butoon
         private void ChooseDeviceButton_Click(object sender, EventArgs e)
@@ -68,49 +62,128 @@ namespace _624_Scouting_Application
 
         private void btnImport_Click()
         {
+      
+            List<string[]> originalFile = new List<string[]>();
+            var finalCsv = new StringBuilder();
+            List<string[]> newFile = new List<string[]>();
+            bool matchData = radioButton1.Checked;
+            bool empty = false;
             try
             {
-                    psi.FileName = PythonExeText.Text;
-                    var folder_path = @devicePath.Text;
-                    //String path = @"D:\Documents\GitHub\624-Scouting\624-Scouting-Installer\624-Scouting-Application\merging.py";
-                    String path = @Application.StartupPath + @"\merging.py";
-                    string arg;
-                    if (radioButton1.Checked)
+                string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                if (matchData)
+                {
+                    path += @"\Match_Data.csv";
+                }
+                else
+                {
+                    path += @"\Pit_Data.csv";
+                }
+                try
+                {
+                    using (var reader = new StreamReader(@path))
                     {
-                         arg = string.Format(" \"{0}\" \"{1}\" {2}", path, folder_path, true);
+                        while (!reader.EndOfStream)
+                        {
+                            var line = reader.ReadLine();
+                            string[] data = line.Split(',');
+                            originalFile.Add(data);
+                            finalCsv.AppendLine(ConvertStringArrayToString(data));
+                        }
                     }
-                    
-                    else
+                }
+                catch
+                {
+                    empty = true;
+                }
+                string newFilePath = @devicePath.Text;
+                using (var reader = new StreamReader(newFilePath))
+                {
+                    var firstLine = reader.ReadLine();
+                    if(empty)
                     {
-                         arg = string.Format(" \"{0}\" \"{1}\" {2}", path, folder_path, false);
+                        newFile.Add(firstLine.Split(','));
                     }
-                    psi.Arguments = arg;
-                    psi.UseShellExecute = false;
-                    psi.CreateNoWindow = true;
-                    psi.RedirectStandardOutput = true;
-                    psi.RedirectStandardError = true;
-                    var errors = "";
-                    var results = "";
-                    using (var process = Process.Start(psi))
+                    while (!reader.EndOfStream)
                     {
-                        errors = process.StandardError.ReadToEnd();
-                        results = process.StandardOutput.ReadToEnd();
+                        var line = reader.ReadLine();
+                        string[] data = line.Split(',');
+                        newFile.Add(data);
                     }
-                    if (results.Contains("yeet"))
+                }
+                if(matchData)
+                {
+                    foreach (string[] newEntry in newFile)
                     {
-                        MessageBox.Show("The program successfully executed. The CSV should be on your desktop.");
+                        string newTeamNumber = newEntry[newEntry.Length - 1];
+                        string newMatchNumber = newEntry[newEntry.Length - 2];
+
+                        bool present = false;
+
+                        foreach (string[] oldEntry in originalFile)
+                        {
+                            string oldTeamNumber = oldEntry[oldEntry.Length - 1];
+                            string oldMatchNumber = oldEntry[oldEntry.Length - 2];
+                            if ((newTeamNumber == oldTeamNumber) && (newMatchNumber == oldMatchNumber))
+                            {
+                                present = true;
+                                goto addCheck;
+                            }
+                        }
+
+                    addCheck: if (!present)
+                        {
+                            originalFile.Add(newEntry);
+                            finalCsv.AppendLine(ConvertStringArrayToString(newEntry));
+                        }
                     }
-                    else
+                }
+                else
+                {
+                    foreach (string[] newEntry in newFile)
                     {
-                        MessageBox.Show("The program did not execute successfully. Please ensure the proper folder is selected.");
+                        string newTeamNumber = newEntry[newEntry.Length - 1];
+                        Console.WriteLine(ConvertStringArrayToString(newEntry));
+                        bool present = false;
+
+                        foreach (string[] oldEntry in originalFile)
+                        {
+                            string oldTeamNumber = oldEntry[oldEntry.Length - 1];
+
+                            if ((newTeamNumber == oldTeamNumber))
+                            {
+                                present = true;
+                                goto addCheck;
+                            }
+                        }
+
+                    addCheck: if (!present)
+                        {
+                            originalFile.Add(newEntry);
+                            finalCsv.AppendLine(ConvertStringArrayToString(newEntry));
+                        }
                     }
-                
-                
+                }
+                File.WriteAllText(@path, finalCsv.ToString());
+                MessageBox.Show("Success. The CSV can be found on your desktop");
+
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show("Error: Something went wrong. Please ensure everything is correct and try again. \n" + ex.ToString());
+
             }
+
+        }
+
+        static string ConvertStringArrayToString(string[] array)
+        {
+            StringBuilder builder = new StringBuilder();
+            foreach (string value in array)
+            {
+                builder.Append(value);
+                builder.Append(',');
+            }
+            return builder.Remove(builder.Length - 1, 1).ToString();
         }
 
         private async void importButton_Click(object sender, EventArgs e)

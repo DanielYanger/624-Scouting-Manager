@@ -109,9 +109,6 @@
     <None Include="Resources\text_green.png" />
   </ItemGroup>
   <ItemGroup>
-    <AdditionalFiles Include="merging.py">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </AdditionalFiles>
     <AdditionalFiles Include="Scouting.py">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </AdditionalFiles>
