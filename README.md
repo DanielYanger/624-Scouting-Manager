@@ -14,3 +14,6 @@ Select the file that you wish to import by navigating to the location of the dat
 
 ### Generate Schedule
 For this option, you will need to event code. To get the event code, navigate to TBA and search up the event. It is the year of the event combined with the code that appears when searching up an event in TBA. For example, the 2019 Newton divison event code would be 2019new. Note that the code should be lowercase. 
+
+### Generate Team List
+This option will generate a team list for any given event using the event code. Follow the same procedure for finding the event key in the Generate Schedule section. The team list can be imported into the scouting app to allow users to pit scout teams prior to an event schedule being released.
