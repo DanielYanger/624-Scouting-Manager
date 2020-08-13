@@ -289,7 +289,7 @@
             "SharedLegacy" = "11:FALSE"
             "PackageAs" = "3:1"
             "Register" = "3:1"
-            "Exclude" = "11:FALSE"
+            "Exclude" = "11:TRUE"
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
@@ -381,7 +381,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:624 Scouting Manager"
         "ProductCode" = "8:{DBDBA552-1051-4515-9F15-DA85C760F507}"
-        "PackageCode" = "8:{F2EB0FBA-5705-40FC-8224-8D0097A9BFF2}"
+        "PackageCode" = "8:{09B2242B-F8AB-4384-B680-73B4751F914E}"
         "UpgradeCode" = "8:{6A4680E3-2022-425E-AE6C-A31B9302BA54}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
@@ -930,7 +930,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_A01AAAE449474C51AE7F47380CCC6634"
             {
-            "SourcePath" = "8:"
+            "SourcePath" = "8:..\\624-Scouting-Application\\obj\\Release\\624 Scouting Application.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_BEE4397E419748899D1427948B2E8D1F"

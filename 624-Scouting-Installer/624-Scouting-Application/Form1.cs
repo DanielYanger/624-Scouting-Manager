@@ -219,12 +219,18 @@ namespace _624_Scouting_Application
         {
            
             string schedule = GetSchedule(eventCodeText.Text).GetAwaiter().GetResult();
-            string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            path += @"\schedule.txt";
-            Console.WriteLine(path);
-            System.IO.File.WriteAllText(@path, schedule);
-            MessageBox.Show("Success. The schedule can be found on your desktop.");
-
+            if (schedule.Contains("ERROR"))
+            {
+                MessageBox.Show("Error. The event code was invalid. Please ensure it is correct and try again.");
+            }
+            else
+            {
+                string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                path += @"\schedule.txt";
+                Console.WriteLine(path);
+                System.IO.File.WriteAllText(@path, schedule);
+                MessageBox.Show("Success. The schedule can be found on your desktop.");
+            }
 
         }
 
@@ -268,7 +274,8 @@ namespace _624_Scouting_Application
             try
             {
                 HttpResponseMessage response = await client.GetAsync("event/" + eventCode + "/matches/simple");
-                if(response.IsSuccessStatusCode)
+                Console.WriteLine(response.StatusCode);
+                if(response.IsSuccessStatusCode==true)
                 {
                     var jsonFile = await response.Content.ReadAsAsync<List<Match>>();
                     jsonFile.Sort(new MatchSorter());
@@ -291,10 +298,14 @@ namespace _624_Scouting_Application
                         }
                     }
                 }
+                else
+                {
+                    finalScheulde += "ERROR";
+                }
             }
             catch
             {
-                Console.WriteLine("Big oof");
+                finalScheulde += "ERROR";
             }
             return finalScheulde;
 
@@ -354,11 +365,18 @@ namespace _624_Scouting_Application
 
             string teamList = GetTeamList(textBox1.Text).GetAwaiter().GetResult();
             Console.WriteLine(teamList);
-            string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            path += @"\teamList.txt";
-            System.IO.File.WriteAllText(@path, teamList);
-            MessageBox.Show("Success. The team list can be found on your desktop.");
+            if (teamList.Contains("ERROR"))
+            {
+                MessageBox.Show("Error. The event code was invalid. Please ensure it is correct and try again.");
 
+            }
+            else
+            {
+                string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                path += @"\teamList.txt";
+                System.IO.File.WriteAllText(@path, teamList);
+                MessageBox.Show("Success. The team list can be found on your desktop.");
+            }
         }
 
 
@@ -380,7 +398,8 @@ namespace _624_Scouting_Application
             try
             {
                 HttpResponseMessage response = await client.GetAsync("event/" + eventCode + "/teams/simple");
-                if (response.IsSuccessStatusCode)
+                
+                if (response.IsSuccessStatusCode==true)
                 {
                     var jsonFile = await response.Content.ReadAsAsync<List<Team>>();
                     foreach (Team team in jsonFile)
@@ -388,9 +407,14 @@ namespace _624_Scouting_Application
                         finalTeamList += team.team_number+";";
                     }
                 }
+                else
+                {
+                    finalTeamList += "ERROR";
+                }
             }
             catch
             {
+                finalTeamList += "ERROR";
                 Console.WriteLine("Big oof");
             }
             return finalTeamList;
