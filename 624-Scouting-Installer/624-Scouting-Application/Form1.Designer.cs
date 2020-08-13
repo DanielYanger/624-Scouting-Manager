@@ -70,7 +70,7 @@
             this.eventCodeLabel.AutoSize = true;
             this.eventCodeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.eventCodeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(240)))), ((int)(((byte)(0)))));
-            this.eventCodeLabel.Location = new System.Drawing.Point(68, 378);
+            this.eventCodeLabel.Location = new System.Drawing.Point(68, 375);
             this.eventCodeLabel.Name = "eventCodeLabel";
             this.eventCodeLabel.Size = new System.Drawing.Size(89, 18);
             this.eventCodeLabel.TabIndex = 25;
@@ -117,7 +117,7 @@
             // ChooseDeviceButton
             // 
             this.ChooseDeviceButton.ForeColor = System.Drawing.Color.Black;
-            this.ChooseDeviceButton.Location = new System.Drawing.Point(39, 253);
+            this.ChooseDeviceButton.Location = new System.Drawing.Point(39, 252);
             this.ChooseDeviceButton.Name = "ChooseDeviceButton";
             this.ChooseDeviceButton.Size = new System.Drawing.Size(120, 20);
             this.ChooseDeviceButton.TabIndex = 18;
@@ -199,9 +199,9 @@
             // 
             this.pictureBox1.BackgroundImage = global::_624_Scouting_Application.Properties.Resources.scouting_manager_banner;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(355, 128);
+            this.pictureBox1.Size = new System.Drawing.Size(400, 156);
             this.pictureBox1.TabIndex = 32;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.WaitOnLoad = true;
@@ -251,7 +251,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(240)))), ((int)(((byte)(0)))));
-            this.label3.Location = new System.Drawing.Point(68, 509);
+            this.label3.Location = new System.Drawing.Point(68, 507);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 18);
             this.label3.TabIndex = 42;
